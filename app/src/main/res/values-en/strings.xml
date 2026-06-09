@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">GoatLocator</string>
+    <string name="btn_register">Register a goat</string>
+    <string name="btn_locate">Locate your goat</string>
+    <string name="btn_photo">Take a photo of the goat</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_back">← Back</string>
+    <string name="btn_confirm">Confirm this position</string>
+    <string name="title_registered">Registered goats</string>
+    <string name="col_id">#</string>
+    <string name="col_date">Date</string>
+    <string name="col_lat">Latitude</string>
+    <string name="col_lon">Longitude</string>
+    <string name="col_photo">Photo</string>
+    <string name="no_location">No position recorded</string>
+    <string name="searching">Searching for goat…</string>
+    <string name="saved_ok">Goat saved!</string>
+    <string name="save_error">Save error</string>
+    <string name="no_goats">No goats registered</string>
+    <string name="locate_first">Locate the goat first!</string>
+    <string name="photo_saved">Photo saved!</string>
+    <string name="photo_cancelled">Photo cancelled</string>
+    <string name="permission_denied">Permission denied</string>
+    <string name="position_saved">Position saved!</string>
+</resources>

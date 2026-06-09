@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">GoatLocator</string>
+    <string name="btn_register">Enregistrer une chèvre</string>
+    <string name="btn_locate">Localiser votre chèvre</string>
+    <string name="btn_photo">Prendre en photo la chèvre</string>
+    <string name="btn_save">Sauvegarder</string>
+    <string name="btn_back">Retour</string>
+    <string name="btn_confirm">Confirmer cette position</string>
+    <string name="title_registered">Chèvres enregistrées</string>
+    <string name="col_id">#</string>
+    <string name="col_date">Date</string>
+    <string name="col_lat">Latitude</string>
+    <string name="col_lon">Longitude</string>
+    <string name="col_photo">Photo</string>
+    <string name="no_location">Aucune position enregistrée</string>
+    <string name="searching">Recherche de la chèvre…</string>
+    <string name="saved_ok">Chèvre sauvegardée !</string>
+    <string name="save_error">Erreur de sauvegarde</string>
+    <string name="no_goats">Aucune chèvre enregistrée</string>
+    <string name="locate_first">Localisez d\'abord la chèvre !</string>
+    <string name="photo_saved">Photo enregistrée !</string>
+    <string name="photo_cancelled">Photo annulée</string>
+    <string name="permission_denied">Permission refusée</string>
+    <string name="position_saved">Position enregistrée !</string>
+</resources>
