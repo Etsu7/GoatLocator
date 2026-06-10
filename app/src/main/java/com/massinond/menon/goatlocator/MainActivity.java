@@ -31,13 +31,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        // Recharge le tableau à chaque retour sur cet écran
         loadGoatsTable();
     }
 
     private void loadGoatsTable() {
         LinearLayout tableBody = findViewById(R.id.tableBody);
-        tableBody.removeAllViews(); // efface les anciennes lignes
+        tableBody.removeAllViews();
 
         GoatDatabaseHelper db = new GoatDatabaseHelper(this);
         List<Goat> goats = db.getAllGoats();
@@ -58,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
             LinearLayout row = new LinearLayout(this);
             row.setOrientation(LinearLayout.HORIZONTAL);
             row.setPadding(8, 8, 8, 8);
-            // Alternance de couleur des lignes
             row.setBackgroundColor(i % 2 == 0
                     ? Color.parseColor("#FFF8F0")
                     : Color.parseColor("#EFE5D8"));

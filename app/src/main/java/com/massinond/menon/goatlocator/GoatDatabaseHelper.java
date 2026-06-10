@@ -15,7 +15,6 @@ public class GoatDatabaseHelper extends SQLiteOpenHelper {
     private static final String DB_NAME    = "goatlocator.db";
     private static final int    DB_VERSION = 1;
 
-    // Table
     public static final String TABLE      = "goats";
     public static final String COL_ID     = "id";
     public static final String COL_PHOTO  = "photo_path";
@@ -44,7 +43,6 @@ public class GoatDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    // Insère une chèvre
     public long insertGoat(String photoPath, double latitude, double longitude, String date) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -55,7 +53,6 @@ public class GoatDatabaseHelper extends SQLiteOpenHelper {
         return db.insert(TABLE, null, values);
     }
 
-    // Récupère toutes les chèvres
     public List<Goat> getAllGoats() {
         List<Goat> goats = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();

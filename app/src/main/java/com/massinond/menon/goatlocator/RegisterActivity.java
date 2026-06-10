@@ -22,10 +22,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-
 public class RegisterActivity extends AppCompatActivity {
 
     private ImageView ivGoatPhoto;
@@ -36,7 +32,6 @@ public class RegisterActivity extends AppCompatActivity {
     private double savedLatitude  = 0;
     private double savedLongitude = 0;
 
-    // Launcher pour récupérer la position depuis MapActivity
     private final ActivityResultLauncher<Intent> mapLauncher =
             registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
                     (ActivityResult result) -> {
@@ -54,7 +49,6 @@ public class RegisterActivity extends AppCompatActivity {
                         }
                     });
 
-    // Launcher pour l'appareil photo
     private final ActivityResultLauncher<Uri> takePictureLauncher =
             registerForActivityResult(new ActivityResultContracts.TakePicture(), success -> {
                 if (success && photoFile != null) {
@@ -74,14 +68,12 @@ public class RegisterActivity extends AppCompatActivity {
         ivGoatPhoto = findViewById(R.id.ivGoatPhoto);
         tvLocation = findViewById(R.id.tvLocation);
 
-        // Bouton localiser → ouvre MapActivity et attend le résultat
         Button btnLocate = findViewById(R.id.btnLocateGoat);
         btnLocate.setOnClickListener(v -> {
             Intent intent = new Intent(this, MapActivity.class);
             mapLauncher.launch(intent);
         });
 
-        // Bouton photo → ouvre l'appareil photo
         Button btnPhoto = findViewById(R.id.btnTakePhoto);
         btnPhoto.setOnClickListener(v -> takePhoto());
 
@@ -93,7 +85,7 @@ public class RegisterActivity extends AppCompatActivity {
                 return;
             }
 
-            // Chemin photo : chaîne vide si pas de photo prise
+            // Chaîne vide si pas de photo prise
             String path = (photoFile != null && photoFile.exists())
                     ? photoFile.getAbsolutePath()
                     : "";
@@ -114,11 +106,10 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        // Bouton retour → retourne à MainActivity
         Button btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(v -> {
             Intent intent = new Intent(this, MainActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // évite d'empiler les activités
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
         });
     }

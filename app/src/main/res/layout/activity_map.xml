@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
-        android:text="@string/searching"
+        android:text="@string/btn_locate"
         android:backgroundTint="#6D4C41"
         android:textColor="#FFFFFF" />
 
